@@ -24,6 +24,6 @@ app.post('/current', function (req, res) {
 });
 
 
-app.listen(3007, function () {
+app.listen(80, function () {
   console.log('Example app listening on port 3007!');
 });
