@@ -5,7 +5,7 @@ var app = express();
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 var number = 0;
 
 app.get('/', function (req, res) {
@@ -23,7 +23,7 @@ app.post('/current', function (req, res) {
   res.json(number).end(200);
 });
 
-
-app.listen(3000, function () {
-  console.log('Example app listening on port 3007!');
+app.set('port', (process.env.PORT || 5000));
+app.listen(function () {
+  console.log('Example app listening on port' + app.get('port'));
 });
