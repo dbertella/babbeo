@@ -24,6 +24,6 @@ app.post('/current', function (req, res) {
 });
 
 app.set('port', (process.env.PORT || 5000));
-app.listen(function () {
-  console.log('Example app listening on port' + app.get('port'));
+app.listen(app.get('port'), function () {
+  console.log('Example app listening on port ' + app.get('port'));
 });
